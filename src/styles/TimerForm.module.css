@@ -1,0 +1,77 @@
+.formContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ddd;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.formGroup {
+  width: 100%;
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.formGroup label {
+  flex: 1 1 20%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.formGroup input {
+  flex: 1 1 80%;
+  padding: 0.3rem;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 16px;
+}
+
+.formGroup input:focus {
+  border-color: skyblue;
+}
+
+.formButtonsContainer {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.submitButton,
+.cancelButton {
+  flex: 1 1 40%;
+  padding: 0.3rem;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  outline: 0;
+  display: block;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.submitButton:focus,
+.cancelButton:focus {
+  border-color: skyblue;
+  outline: 0;
+}
+
+.submitButton {
+  margin: 1rem 1rem 0.5rem 0;
+}
+
+.cancelButton {
+  margin: 1rem 0 0.5rem 1rem;
+}
