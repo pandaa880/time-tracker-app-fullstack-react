@@ -5,7 +5,13 @@ import EditableTimer from "./EditableTimer"
 // import styles
 import styles from "../styles/EditableTimersList.module.css"
 
-function EditableTimersList({ timers, onFormSubmit, onDeleteClick }) {
+function EditableTimersList({
+  timers,
+  onFormSubmit,
+  onDeleteClick,
+  onStartClick,
+  onStopClick
+}) {
   return (
     <div className={styles.timersList}>
       {timers && timers.length > 0 ? (
@@ -19,6 +25,8 @@ function EditableTimersList({ timers, onFormSubmit, onDeleteClick }) {
             runningSince={timer.runningSince}
             onFormSubmit={onFormSubmit}
             onDeleteClick={onDeleteClick}
+            onStartClick={onStartClick}
+            onStopClick={onStopClick}
           />
         ))
       ) : (
