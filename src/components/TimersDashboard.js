@@ -27,6 +27,16 @@ function TimersDashboard() {
     deleteTimer(timerID)
   }
 
+  /** handle start timer */
+  const handleStartClick = timerID => {
+    startTimer(timerID)
+  }
+
+  /** handle stop timer */
+  const handleStopClick = timerID => {
+    stopTimer(timerID)
+  }
+
   /** create Timer */
   const createTimer = timer => {
     const new_timer = newTimer(timer)
@@ -64,6 +74,43 @@ function TimersDashboard() {
     setTimers(newTimers)
   }
 
+  /** start timer */
+  const startTimer = timerID => {
+    const currentTime = Date.now()
+
+    const updatedTimers = timers.map(timer => {
+      if (timer.id === timerID) {
+        return Object.assign({}, timer, {
+          runningSince: currentTime
+        })
+      } else {
+        return timer
+      }
+    })
+
+    setTimers(updatedTimers)
+  }
+
+  /** stop timer */
+  const stopTimer = timerID => {
+    const currentTime = Date.now()
+
+    const updatedTimers = timers.map(timer => {
+      if (timer.id === timerID) {
+        const lastElapsed = currentTime - timer.runningSince
+
+        return Object.assign({}, timer, {
+          elapsed: timer.elapsed + lastElapsed,
+          runningSince: null
+        })
+      } else {
+        return timer
+      }
+    })
+
+    setTimers(updatedTimers)
+  }
+
   return (
     <>
       <h2 className={styles.dashboardTitle}>Timers</h2>
@@ -73,6 +120,8 @@ function TimersDashboard() {
             timers={timers}
             onFormSubmit={handleEditFormSubmit}
             onDeleteClick={handleDeleteTimer}
+            onStartClick={handleStartClick}
+            onStopClick={handleStopClick}
           />
           <ToggleableTimerForm
             isOpen={true}
