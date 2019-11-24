@@ -1,0 +1,24 @@
+.dashboardTitle {
+  padding: 0 0 1rem 0;
+  border: 1px solid transparent;
+  border-bottom-color: #000;
+  width: 100%;
+  text-align: center;
+}
+
+.mainContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.timerListAndFormContainer {
+  padding: 1rem;
+  /* border: 1px solid #000; */
+  width: 450px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}

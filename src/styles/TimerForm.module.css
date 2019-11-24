@@ -1,0 +1,96 @@
+.formContainer {
+  flex: 1 1 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.formGroup {
+  width: 100%;
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.formGroup label {
+  flex: 1 1 20%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.formGroup input {
+  flex: 1 1 80%;
+  padding: 0.3rem;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  font-size: 16px;
+}
+
+.formGroup input:focus {
+  border-color: skyblue;
+}
+
+.formButtonsContainer {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.submitButton,
+.cancelButton {
+  flex: 1 1 40%;
+  padding: 0.3rem;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  outline: 0;
+  display: block;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.submitButton:focus {
+  border-color: skyblue;
+  outline: 0;
+}
+
+.cancelButton:focus {
+  border-color: transparent;
+  outline: 0;
+}
+
+.submitButton {
+  margin: 1rem 1rem 0.5rem 0;
+  border-color: skyblue;
+}
+
+.submitButton:hover {
+  background-color: skyblue;
+  color: #fff;
+  transition: background-color 0.2s linear;
+}
+
+.cancelButton {
+  margin: 1rem 0 0.5rem 1rem;
+  border-color: #ec4646;
+}
+
+.cancelButton:hover {
+  background-color: #ec4646;
+  color: #fff;
+  transition: background-color 0.2s linear;
+}
